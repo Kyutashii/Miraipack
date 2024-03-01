@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "join",
 	eventType: ["log:subscribe"],
 	version: "1.0.1",
-	credits: "Grey",
+	credits: "cl]ff",
 	description: "Notify bots or people entering the group",
 	dependencies: {
 		"fs-extra": "",

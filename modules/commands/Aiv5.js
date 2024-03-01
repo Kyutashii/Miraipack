@@ -16,7 +16,7 @@ module.exports.run = async function({ api, event, args }) {
 try {
 	if (!txt){ return api.sendMessage("Please provide a question first!", event.threadID, event.messageID)
 }
-api.sendMessage(`🔍"${txt}"`,event.threadID, event.messageID);
+api.sendMessage(`Please wait while I think through your request...`,event.threadID, event.messageID);
 	const res = await b.get(`https://chatgayfeyti.archashura.repl.co/?gpt=${txt}`);
 let resu = res.data.content;
 api.sendMessage(resu, event.threadID, event.messageID)

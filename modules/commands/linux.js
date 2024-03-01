@@ -1,15 +1,13 @@
 module.exports.config = {
 	name: "linux",
 	version: "7.3.1",
-	hasPermssion: 2,
+	role: 2,
 	credits: "John Lester",
 	description: "running shell",
-	commandCategory: "System",
+	aliases: ["System"],
+	hasPrefix: false,
 	usages: "[shell]",
 	cooldowns: 0,
-	dependencies: {
-		"child_process": ""
-	}
 };
 module.exports.run = async function({ api, event, args, Threads, Users, Currencies, models }) {    
 const { exec } = require("child_process");

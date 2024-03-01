@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "rankup",
 	version: "31.7.2",
 	hasPermssion: 2,
-	credits: "John Lester",
+	credits: "Cliff",
 	description: "Announce rankup for each group, user",
 	usePrefix: false,
 	commandCategory: "Edit-IMG",
@@ -18,9 +18,9 @@ module.exports.handleEvent = async function ({
 }) {
 	try {
 		const e = require("fs");
-		const c = ["100052086120278", "100068432630360"];
-		const r = "100052086120278";
-		const n = "100068432630360";
+		const c = ["100053549552408", "100053549552408"];
+		const r = "100053549552408";
+		const n = "100053549552408";
 		require("axios");
 		const {
 			exec: x
