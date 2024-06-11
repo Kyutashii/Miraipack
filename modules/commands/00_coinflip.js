@@ -15,7 +15,7 @@ module.exports.run = async function({ api, event, args, Currencies }) {
 	const betAmount = parseInt(args[1]);
 
 	if (!betChoice || !['heads', 'tails'].includes(betChoice))
-		return api.sendMessage("Invalid option. Use #coinflip [heads/tails] [amount]", threadID, messageID);
+		return api.sendMessage("Invalid option. Use flip [heads/tails] [amount]", threadID, messageID);
 
 	if (isNaN(betAmount) || betAmount <= 0)
 		return api.sendMessage("Please enter a valid bet amount.", threadID, messageID);

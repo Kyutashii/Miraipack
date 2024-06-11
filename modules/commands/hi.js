@@ -65,7 +65,7 @@ let juswa = ["Have you eaten?", "What are you doing?", "How are you senpai?", "I
     hours > 1801 && hours <= 2100 ? "Evening.." : 
     hours > 2101 && hours <= 2400 ? "Late Night Sleep Well..." : 
     "error");
-    let name = await Users.getNameUser(event.senderID);
+    let name = await? Users.getNameUser(event.senderID);
     let mentions = [];
     mentions.push({
       tag: name,

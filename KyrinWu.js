@@ -310,7 +310,7 @@ loginApiData.setOptions(global.config.FCAOption)
 																const _0x21abed = join(__dirname, 'nodemodules', 'node_modules', dependency);
 																try {
 																		if (!global.nodemodule.hasOwnProperty(dependency)) {
-																				if (listPackage.hasOwnProperty(dependency) || listbuiltinModules.includes(dependency)) global.nodemodule[dependency] = require(dependency);
+																				if (listPackage.hasOwnProperty(dependency) || listbuiltinModules.includes(dependency)) global.nodemodule[dependency] = require(dependency);v
 																				else global.nodemodule[dependency] = require(_0x21abed);
 																		} else '';
 																} catch {

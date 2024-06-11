@@ -6,7 +6,7 @@ module.exports.config = {
 	name: "spamleave",
 	version: "1.0.0",
 	hasPermission: 1,
-	credits: "Jonell Magallanes and BLUE ",//remodel nanaman
+	credits: "Jonell Magallanes",
 	description: "Automatically detect and act on spam",
 	usePrefix: "true",
 	commandCategory: "admin",

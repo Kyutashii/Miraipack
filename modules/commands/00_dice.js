@@ -1,9 +1,7 @@
 const fs = require('fs');
 
-// Helper function to roll a die
 const rollDie = (sides = 6) => Math.floor(Math.random() * sides) + 1;
 
-// Helper function to convert numeric roll to an emoji
 const numberToEmoji = (roll) => {
 	const diceEmojis = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 	return diceEmojis[roll - 1];

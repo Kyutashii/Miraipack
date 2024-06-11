@@ -10,9 +10,6 @@ module.exports.config = {
 	version: "2.0.0",
 	hasPermission: 0,
 	credits: "Eugene Aguilar",
-	// Converted by cliff
-	changeCreditor: "ay_bayot",
-	antichangeCredits: "100053549552408",
 	usePrefix: true,
 	description: "Automatically send shoti with on and off",
 	commandCategory: "shoti cron",
@@ -42,9 +39,9 @@ module.exports.run = async function({ api, event, input }) {
 				try {
 					if (activeThreads[threadID]) {
 						let response = await axios.post(
-							"https://your-shoti-api.vercel.app/api/v1/get",
+							"https://eurix-api.replit.app/shoti",
 							{
-								apikey: "$shoti-1hg4gifgnlfdmeslom8",
+								apikey: "eugeneaguilar89",
 							}
 						);
 						var file = fs.createWriteStream(__dirname + "/cache/shoti.mp4");
