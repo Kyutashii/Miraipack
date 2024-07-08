@@ -18,10 +18,10 @@ module.exports.run = async ({ api, event }) => {
 		const ownerInfo = {
 			name: `${global.config.BOTOWNER}`,
 			gender: 'MALE',
-			age: '17',
-			height: '5,4',
+			age: '20',
+			height: '5+',
 			facebookLink: `${global.config.OWNERLINK}`,
-			status: 'SINGLE'
+			status: 'i have a girlfriend.'
 		};
 
 		const videoUrl =  
@@ -39,7 +39,7 @@ module.exports.run = async ({ api, event }) => {
 		fs.writeFileSync(videoPath, Buffer.from(videoResponse.data, 'binary'));
 
 		const response = `
-	《 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 》
+	👤 | • 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 ◈▣
 \n➟${global.config.BOTOWNER} Senpai\n
 ❂ Admin UID: ${global.config.OWNERID}\n
 ♛ Admin FB Link:\n${global.config.OWNERLINK}
@@ -52,7 +52,7 @@ module.exports.run = async ({ api, event }) => {
 		}, event.threadID, event.messageID);
 
 		if (event.body.toLowerCase().includes('ownerinfo')) {
-			api.setMessageReaction('🥵', event.messageID, (err) => {}, true);
+			api.setMessageReaction('😎', event.messageID, (err) => {}, true);
 		}
 	} catch (error) {
 		console.error('Error in ownerinfo command:', error);
