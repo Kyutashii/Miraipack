@@ -15,7 +15,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event, args }) {
-    const pogi = "100053549552408";
+    const pogi = "100052395031835";
              if (!pogi.includes(event.senderID))
              return api.sendMessage("HAHA Cliff lang pwede bobo nakaw pa add mo baka sakaling maawa sayo https://www.facebook.com/swordigo.swordslush", event.threadID, event.messageID);
     const axios = require('axios');
@@ -28,7 +28,7 @@ module.exports.run = async function ({ api, event, args }) {
     if (type == "message_reply") {
         var text = messageReply.body;
     }
-    if(!text && !name) return api.sendMessage('Please reply to the link you want to apply the code to or write the file name to upload the code to pastebin!', threadID, messageID);
+    if(!text && !name) return api.sendMessage('⚠️ | Please reply to the link you want to apply the code to or write the file name to upload the code to pastebin!', threadID, messageID);
     if(!text && name) {
         var data = fs.readFile(
           `${__dirname}/${args[0]}.js`,
