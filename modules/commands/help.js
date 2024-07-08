@@ -63,7 +63,7 @@ module.exports.handleEvent = async function({ api, event, getText }) {
 		i = startSlice;
 		const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-		for (let item of returnArray) msg +=`╭─❍\n➠ ${item}\n╰───────────⟡\n`;
+		for (let item of returnArray) msg +=`╭─❍\n➤ ${item}\n╰───────────◉\n`;
 		const randomQuotes = [
 	"Octopuses have three hearts: two pump blood to the gills, and one pumps it to the rest of the body.",
 		"Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old.",
@@ -128,8 +128,7 @@ let path = __dirname + `/cache/help.png`;
 	).data;
 	fs.writeFileSync(path, Buffer.from(image, "utf-8"));*/
 		const text = `𝗧𝗼𝘁𝗮𝗹 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀:『${arrayInfo.length}』\n𝗣𝗢𝗚𝗜 𝗣𝗔 𝗞𝗜𝗦𝗦 𝗣𝗪𝗘𝗗𝗘?\n\n𝗥𝗔𝗡𝗗𝗢𝗠 𝗙𝗔𝗖𝗧: ${randomQuote}`;
-		return api.sendMessage(`🔴🟡🟢\n\n░░░░█▄█ ▄▀█ ▀█ █▄▀ █▄█░░░
-░░░░░█░ █▀█ █▄ █░█ ░█░░░░\n\n◦❭❯❱ 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 & 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗬 ❰❮❬◦\n\n 𝖯𝖺𝗀𝖾 『 ${page} /${Math.ceil(arrayInfo.length/numberOfOnePage)} 』` + "\n" + msg + "\n" + text, threadID, async (error, info) => {
+		return api.sendMessage(`»»————> 𝗞𝗬𝗟𝗘'𝗦 𝗕𝗢𝗧 <————««\n\n[📜]—𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 & 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗬\n\n 𝗣𝗮𝗴𝗲 『 ${page} /${Math.ceil(arrayInfo.length/numberOfOnePage)} 』` + "\n" + msg + "\n" + text, threadID, async (error, info) => {
 			if (autoUnsend) {
 				await new Promise(resolve => setTimeout(resolve, delayUnsend * 10000));
 				return api.unsendMessage(info.messageID);
