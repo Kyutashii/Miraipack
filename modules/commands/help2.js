@@ -1,24 +1,25 @@
 module.exports.config = {
-	name: "help2",
+	name: "help",
 	version: "1.0.0",
 	hasPermission: 0,
-	credits: "baby august",
+	credits: "Kyle",
 	description: "Guide for new users",
 	commandCategory: "use prefix",
 	usages: "see all commands",
 	cooldowns: 5,
 	envConfig: {
-		autoUnsend: true,
+		autoUnsend: false,
 		delayUnsend: 60
 	}
 };
 
 	const mathSansBold = {
-	A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜",
-	J: "𝗝", K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥",
-	S: "𝗦", T: "𝗧", U: "𝗨", V: "𝗩", W: "𝗪", X: "𝗫", Y: "𝗬", Z: "𝗭", a: "𝗔", b: "𝗕", c: "𝗖", d: "𝗗", e: "𝗘", f: "𝗙", g: "𝗚", h: "𝗛", i: "𝗜",
-	j: "𝗝", k: "𝗞", l: "𝗟", m: "𝗠", n: "𝗡", o: "𝗢", p: "𝗣", q: "𝗤", r: "𝗥",
-	s: "𝗦", t: "𝗧", u: "𝗨", v: "𝗩", w: "𝗪", x: "𝗫", y: "𝗬", z: "𝗭"
+	 'a': '𝑎', 'b': '𝑏', 'c': '𝑐', 'd': '𝑑', 'e': '𝑒', 'f': '𝑓', 'g': '𝑔', 'h': 'ℎ',
+    'i': '𝑖', 'j': '𝑗', 'k': '𝑘', 'l': '𝑙', 'm': '𝑚', 'n': '𝑛', 'o': '𝑜', 'p': '𝑝', 'q': '𝑞',
+    'r': '𝑟', 's': '𝑠', 't': '𝑡', 'u': '𝑢', 'v': '𝑣', 'w': '𝑤', 'x': '𝑥', 'y': '𝑦', 'z': '𝑧',
+    'A': '𝐴', 'B': '𝐵', 'C': '𝐶', 'D': '𝐷', 'E': '𝐸', 'F': '𝐹', 'G': '𝐺', 'H': '𝐻', 'I': '𝐼',
+    'J': '𝐽', 'K': '𝐾', 'L': '𝐿', 'M': '𝑀', 'N': '𝑁', 'O': '𝑂', 'P': '𝑃', 'Q': '𝑄', 'R': '𝑅',
+    'S': '𝑆', 'T': '𝑇', 'U': '𝑈', 'V': '𝑉', 'W': '𝑊', 'X': '𝑋', 'Y': '𝑌', 'Z': '𝑍'
 };
 
 module.exports.handleEvent = function ({ api, event, getText }) {
@@ -53,16 +54,16 @@ module.exports.run = async function ({ api, event, args }) {
 			categories.add(categoryName);
 			categorizedCommands.set(categoryName, []);
 		}
-		categorizedCommands.get(categoryName).push(`│ ✧ ${value.config.name}`);
+		categorizedCommands.get(categoryName).push(`│ ➥ ${value.config.name}`);
 	}
 
-	let msg = `🔴🟡🟢\n\nHey ${userName}, these are commands that may help you:\n`;
+	let msg = `➤ 𝙕𝙀𝙋𝙃𝙔𝙍𝙐𝙎 𝘽𝙊𝙏ツ\n\n𝗛𝗲𝘆 𝗭𝗲𝗻𝗽𝗮𝗶 ${userNameTag}, ᴛʜᴇsᴇ  ᴀʀᴇ  ᴄᴏᴍᴍᴀɴᴅs  ᴛʜᴀᴛ  ᴍᴀʏ  ʜᴇʟᴘ  ʏᴏᴜ:\n`;
 
 	for (const categoryName of categories) {
 		const categoryNameSansBold = categoryName.split("").map(c => mathSansBold[c] || c).join("");
-		msg += `╭─❍「 ${categoryNameSansBold} 」\n`;
+		msg += `╭─◉ ${categoryNameSansBold}\n`;
 		msg += categorizedCommands.get(categoryName).join("\n");
-		msg += "\n╰───────────⟡\n";
+		msg += "\n╰───────────◉\n";
 	}
 
 	const randomQuotes = [
@@ -115,7 +116,7 @@ module.exports.run = async function ({ api, event, args }) {
 
 	const randomQuote = randomQuotes[Math.floor(Math.random() * randomQuotes.length)];
 
-	msg += `├─────☾⋆\n│ » Total commands: [ ${commands.size} ]\n│「 POGI PA KISS PWEDE?」\n╰──────────⧕\n\n𝗥𝗔𝗡𝗗𝗢𝗠 𝗙𝗔𝗖𝗧: ${randomQuote}`;
+	msg += `├─────❖\n│ » 𝗧𝗼𝘁𝗮𝗹  𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ☞ [ ${commands.size} ]\n│ツ𝙆𝙔𝙇𝙀𝙋𝙊𝙂𝙄༆\n╰──────────☯︎\n\n📌 𝗥𝗔𝗡𝗗𝗢𝗠 𝗙𝗔𝗖𝗧: ${randomQuote}`;
 
 	return api.sendMessage(msg, threadID, async (error, info) => {
 		if (autoUnsend) {
