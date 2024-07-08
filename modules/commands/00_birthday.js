@@ -1,7 +1,7 @@
 module.exports.config = {
 	name: "birthday",
 	version: "1.0.0",
-	credits: "cliff",
+	credits: "Kyle",
 	hasPermission: 0,
 	usages: "birthday [set dd/mm <UserID>] | [remove <UserID>]",
 	commandCategory: "utility",
@@ -52,7 +52,7 @@ const checkAndNotifyBirthdays = async (api) => {
 
 	Object.keys(birthdayDb).forEach(userId => {
 		if (birthdayDb[userId] === todayStr) {
-			api.sendMessage(`🎉 Happy Birthday <@${userId}>! 🎂`, threadID);
+			api.sendMessage(`🎉 𝗛𝗮𝗽𝗽𝘆 𝗕𝗶𝗿𝘁𝗵𝗱𝗮𝘆 <@${userId}>! 🎂`, threadID);
 		}
 	});
 };
